@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* ============================================
+   PAYRIUM DESIGN SYSTEM (STRICT LIGHT MODE)
+   ============================================ */
+
+@theme {
+  /* 
+     Color Palette: "Premium White" 
+     DARK MODE HAS BEEN REMOVED.
+  */
+  
+  --color-primary: #3B82F6;
+  --color-primary-foreground: #FFFFFF;
+  
+  /* Backgrounds: Explicitly Light */
+  --color-background: #F5F6F8;
+  --color-surface: #FFFFFF;
+  
+  /* Text: Slate 900 */
+  --color-foreground: #0F172A;
+  --color-muted: #64748B;
+  
+  /* Borders */
+  --color-border: #E2E8F0;
+
+  /* BSC Brand */
+  --color-bsc: #F0B90B;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px -5px rgba(59, 130, 246, 0.3);
+}
+
+/* ============================================
+   BASE RESET (FORCE LIGHT)
+   ============================================ */
+
+:root {
+  color-scheme: light; /* Force Browser to Light Mode */
+  --background: #F5F6F8;
+  --foreground: #0F172A;
+}
+
+body {
+  background-color: #F5F6F8; /* CSS Variable Fallback */
+  color: #0F172A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 
+  Explicitly override any user-agent dark mode styles 
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background-color: #F5F6F8;
+    color: #0F172A;
+  }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Safe Area Spacing */
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  .pb-nav-safe { padding-bottom: 5rem; }
+  
+  @media (min-width: 768px) {
+    .pb-nav-safe { padding-bottom: 0; }
+  }
+}
