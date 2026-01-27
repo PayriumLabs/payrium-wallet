@@ -58,31 +58,7 @@ We have successfully implemented the core wallet architecture and DAO features.
 
 ---
 
-## 🗺️ Roadmap
-
-### Phase 2: Enhanced DeFi (Upcoming)
-
-- [ ] **DEX Aggregation**: Full swap functionality with best-rate finding.
-- [ ] **Staking Dashboard**: Native staking for BNB and PUM tokens.
-- [ ] **Fiat On-ramp**: Integration with providers (e.g., MoonPay/Transak) for direct card purchases.
-
-### Phase 3: Ecosystem Expansion
-
-- [ ] **NFT Gallery**: View and manage BSC NFTs.
-- [ ] **WalletConnect v2**: Connect Payrium to other dApps as a signer.
-- [ ] **Multi-chain Support**: Extending architecture to Ethereum and Polygon.
-
----
-
-## 🤝 Contributing & Access
-
-### Admin Access
-
-Repositories users with `Admin` status have full access to:
-
-- Manage repository settings and access control.
-- Merge Pull Requests to `main`.
-- Manage Secrets and CI/CD pipelines.
+## 🤝 Contributing
 
 ### Setup for Contributors
 
