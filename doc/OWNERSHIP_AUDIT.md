@@ -1,7 +1,6 @@
 # Contract Ownership & Role Audit
 
-**File Analyzed**: `contracts/PayriumToken.sol`
-**Audit Date**: 2026-02-03
+**File**: `contracts/PayriumToken.sol`
 
 ## Executive Summary
 
@@ -28,10 +27,10 @@ The current implementation of the `PayriumToken` is a simplified ERC-20 token. I
 Since there is no contract owner to change, you cannot "transfer ownership" of the code itself. However, you can transfer control of the **Economy**.
 
 - **Deployer**: Received 100% of the supply (200M PUM) at deployment.
-- **Action**: To transfer control, you simply **transfer the tokens** from the Deployer Wallet to your intended Admin or DAO Treasury wallet.
+- **Action**: To transfer control, we will simply **transfer the tokens** from the Deployer Wallet to the intended Admin or DAO Treasury wallet.
 - **Who Rules?**: Whoever holds the tokens holds the power in this economy.
 
 ## Recommendation for Mainnet
 
 - **Option A (Keep Current)**: Best for a "Bitcoin-like" fixed supply model. Secure and simple.
-- **Option B (Upgrade)**: If you require features like _Minting more tokens later_, _Pausing transfers_, or _Blacklisting_, we must rewrite the contract to inherit from OpenZeppelin's `AccessControl` and `ERC20Burnable`/`ERC20Pausable` before the Mainnet launch.
+- **Option B (Upgrade)**: If we require features like _Minting more tokens later_, _Pausing transfers_, or _Blacklisting_, we will rewrite the contract to inherit from OpenZeppelin's `AccessControl` and `ERC20Burnable`/`ERC20Pausable` before the Mainnet launch.
